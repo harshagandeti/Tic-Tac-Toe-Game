@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Main-Container {
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.nav{
+  box-sizing: border-box;
+  height: 5rem;
+  display: flex;
+ 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1.2rem;
+}
+.nav h1{
   color: white;
+  font-weight: 400;
+}
+.nav h2{
+  /* color: white; */
+  font-weight: 400;
+}
+.nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: repeat(3, 1fr);
+  list-style: none;
+  font-size: 1.8rem;  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.nav ul li {
+  margin: 0 1.2rem;
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Game-Container {
+  width: 350px;
+  height: 350px;
+  vertical-align: middle;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid rgb(158, 148, 148);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+
+  /* .Game-Box {
+    border: 2px solid rgb(158, 148, 148);
+    cursor: pointer;
+  } */
+
+}
+
+.cell {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid rgb(158, 148, 148);
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell:hover{
+  background-color: rgb(158, 148, 148);
+  
+}
+
+.active {
+  color: rgb(6, 230, 17);
+
+}
+
+.disable {
+  color: rgb(89, 87, 87);
+  /* text-decoration: line-through; */
+
+}
+.x-f{
+  color: rgb(255, 82, 48);
+}
+.o-f{
+  color: rgb(0, 251, 255);
+}
+.reset-btn {
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  font-size: 1.25rem;
+  color: white;
+  background-color: orangered;
+  cursor: pointer;
+}
+
+h2 {
+  display: inline;
+  font-size: 2.5rem;
+  margin: 0;
 }
